@@ -58,7 +58,7 @@ option = {
                 value: 2
             },
             symbolSize: function (val) {
-                return Math.log(val[2]+5)*8;
+                return Math.log(val[2]+5)*6;
             },
             label: {
                 formatter: '{b}',
@@ -75,14 +75,14 @@ option = {
             }
         },
         {
-            name: 'Top 5',
+            name: 'Top 10',
             type: 'effectScatter',
             coordinateSystem: 'bmap',
             data: convertData(data.sort(function (a, b) {
                 return b.value - a.value;
             }).slice(0, 10)),
             symbolSize: function (val) {
-                return Math.log(val[2]+5)*4;
+                return Math.log(val[2]+5)*3;
             },
             encode: {
                 value: 2
