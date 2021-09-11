@@ -32,13 +32,14 @@
         }
         return res;
     };
-var dateFrom = new Date("2021-9-6 14:58:43").toLocaleDateString();//就是这么简单
-var date = new Date().toLocaleDateString();
+var dateFrom = new Date(Date.UTC(2021, 09, 05, 0, 0, 0)).toISOString().slice(0, 10);;//就是这么简单
+var date = new Date().toISOString().slice(0, 10);
 option = {
     title: {
-        text: '新加坡疫情地图 (' + dateFrom + " - " + date+')',
-        subtext: '',
-        left: 'center'
+        text: '新加坡疫情地图',
+        subtext: '(' + dateFrom + " - " + date+')',
+        left: 'center',
+        // backgroundColor: '#FFF'
     },
     tooltip : {
         trigger: 'item'
