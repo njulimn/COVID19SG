@@ -32,10 +32,11 @@
         }
         return res;
     };
+var dateFrom = new Date("2021-9-6 14:58:43").toLocaleDateString();//就是这么简单
 var date = new Date().toLocaleDateString();
 option = {
     title: {
-        text: '新加坡疫情地图 (6/9/2021 - ' + date+')',
+        text: '新加坡疫情地图 (' + dateFrom + " - " + date+')',
         subtext: '',
         left: 'center'
     },
